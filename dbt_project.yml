@@ -68,18 +68,18 @@ vars:
   # -- Naming conventions variables --
   # to add a new "model type", update the variable model_types 
   # and create new variables with the names <model_type>_folder_name and/or <model_type>_prefixes 
-  model_types: ['base', 'staging', 'intermediate', 'marts', 'other']
+  model_types: ['base', 'cleaned', 'core', 'usecases', 'misc']
 
   base_folder_name: 'base'
-  staging_folder_name: 'staging'
-  intermediate_folder_name: 'intermediate'
-  marts_folder_name: 'marts'
+  cleaned_folder_name: 'cleaned'
+  core_folder_name: 'core'
+  usecases_folder_name: 'usecases'
   
   base_prefixes: ['base_']
-  staging_prefixes: ['stg_']
-  intermediate_prefixes: ['int_']
-  marts_prefixes: ['fct_', 'dim_']
-  other_prefixes: ['rpt_']
+  cleaned_prefixes: ['cln_']
+  core_prefixes: ['core_']
+  usecases_prefixes: ['uc_']
+  misc_prefixes: ['misc_']
 
   # -- Performance variables --
   chained_views_threshold: "{{ 5 if target.type not in ['athena', 'trino'] else 4 }}"
